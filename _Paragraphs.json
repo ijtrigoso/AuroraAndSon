@@ -1,0 +1,35 @@
+{
+  "About Us": [
+    "Aurora and Son is a hauling company that specializes in moving vehicles across the East Coast with great care and professionalism.",
+    "Founded by Fernando Trigoso with 35+ years of trucking and driving experience, this is a family owned and operated hauling company and is based out of Tampa, Florida.",
+    "At Aurora and Son, we take pride in our work and it reflects in our service and customer experience.",
+    ""
+  ],
+  "Services": {
+    "Commercial Vehicle Hauling": {
+      "top-level": "With Commercial Vehicle Hauling, we can ensure your company or dealership vehicles are taken care of throughout shipping and loading.",
+      "breakdown": "This service includes trucks and cars for your company or dealership scheduled ahead of time and with reliable delivery."
+    },
+    "Personal Vehicle Hauling": {
+      "top-level": "With Personal Vehicle Hauling, we can ensure your personal property expertly cared for.",
+      "breakdown": "This service includes trucks and cars. With personal property inspections before loading and during delivery, ensuring your personal vehicle is maintained in its condition."
+    }
+  },
+  "Meet The Team": {
+    "Fernando Trigoso": {
+      "image_placement":  "left",
+      "title": "Owner",
+      "text":  "Owner and Driver of Aurora and Son."
+    },
+    "Eric Nunez": {
+      "image_placement": "right",
+      "title": "Driver",
+      "text": "This guy drives the truck sometimes"
+    },
+    "Randy Oliva": {
+      "image_placement": "left",
+      "title": "Dispatcher",
+      "text": "This guy does numbers or something"
+    }
+  }
+}

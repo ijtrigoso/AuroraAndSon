@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Aurora and Son
+{% endblock %}
+
+{% block Comp_Desc %}
+
+<br>
+<div class="container my-5" id="description">
+  <div class="p-5 text-center bg-body-tertiary rounded-3 shadow-lg bg-dark">
+    <img class="rounded-3" width="400" height="250" src="../static/A&SLogo.png">
+    <h1 class="text-body-emphasis">Aurora & Son - Hauling Co.</h1>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+      Aurora & Son is combining excellent service and communication with your hauling needs.
+      Ship your vehicle with complete confidence and peace of mind with our NEW 2024 Truck and Trailer!
+    </p>
+    <div class="d-inline-flex gap-2 mb-5">
+      <a href="{{ url_for('contact_us_page') }}">
+      <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+        Contact Us!
+      </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block Services %}
+
+<br>
+<div class="container-xlg bg-dark" id="services">
+  <div class="row"  style="margin:auto">
+    <h2 class="col-sm-1 fw-bold display-1 text-white" style="margin-left:50px">Our Services</h2>
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 rol-cols-md-3 g-3"  style="margin:auto">
+    <div class="col-sm-1"></div>
+    {% for service in services %}
+      <div class="col col-sm-5">
+        <div class="card shadow-sm customPhoneHeight">
+          {% if service == "Commercial Vehicle Hauling" %}
+            <img class="bd-placeholder-img card-img-top" width="100%" height="350" role="img"
+                 src="../static/Commercial.png">
+          {% elif service == "Personal Vehicle Hauling" %}
+            <img class="bd-placeholder-img card-img-top" width="100%" height="350" role="img"
+                 src="../static/Personal.png">
+          {% endif %}
+          <div class="card-body">
+            <h3 class="fw-bold display-7 card-text text-left">{{ service }}</h3>
+            {% for service_desc in services[service] %}
+              {% if service_desc == "top-level" %}
+                <p class="fs-5 card-text text-left">{{ services[service].get(service_desc) }}</p>
+              {% elif service_desc == "breakdown" %}
+                <p class="fs-7 card-text text-left">- {{ services[service].get(service_desc) }}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    <div class="col-sm-1"></div>
+  </div>
+  <br>
+  <div class="row" style="margin:auto">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+      <a href="{{ url_for('contact_us_page') }}">
+        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">
+          Get In Touch...
+        </button>
+      </a>
+    </div>
+  </div>
+  <br>
+</div>
+
+{% endblock %}
+
+{% block AboutUs %}
+<br>
+<br>
+<br>
+<div class="container-xlg" id="about-us">
+  <div class="row" style="margin:auto">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="col">
+        <img class="rounded-5 customTruckPhoneView" src="../static/Truck.png">
+        <h3 class="text-center">- With our NEW 2024 Truck and Trailer -</h3>
+        <br>
+        <div class="text-center">
+          <h1 class="display-3 fw-bold text-center">About Us</h1>
+        </div>
+        <div class="text-center">
+          <span class="fs-5">
+            {{ about_us }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+<br>
+{% endblock %}
+
+{% block MeetTheTeam %}
+<br>
+<div class="container-xlg bg-dark text-white" id="">
+  <div class="row" style="margin:auto">
+    <h2 class="col-md-1 fw-bold display-1" style="margin-left:50px">Our Team</h2>
+  </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin:auto">
+      {% for person in team_strings %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="card-image-top" width="100%" height="400"
+            src="../static/team/{{ person }}.png" alt="../static/BlankPerson.png">
+          </div>
+          <div>
+            <h2 class="featurette-heading fw-normal lh-1">{{ person }}</h2>
+            <span class="fs-5">{{ team_strings[person].get('title') }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+</div>
+<br>
+{% endblock %}
+

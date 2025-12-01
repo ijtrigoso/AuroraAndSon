@@ -1,0 +1,41 @@
+.customPhoneHeight {
+    height: 500px
+}
+.customTruckPhoneView {
+    width: 1000
+    height: 90%
+}
+.customTeamPhoneView {
+    width:100%
+    height: 800
+}
+
+/* ===== Desktop Views ===== */
+@media (max-width: 1700px) {
+    .customPhoneHeight {
+        height: 650px
+    }
+    .customTruckPhoneView {
+        width=500
+        height=90%
+    }
+    .customTeamPhoneView {
+        width:100%
+        height: 400
+    }
+}
+
+/* ===== Phone Views ===== */
+@media (max-width: 900px) {
+    .customPhoneHeight {
+        height: 750px
+    }
+    .customTruckPhoneView {
+        width=500
+        height=90%
+    }
+    .customTeamPhoneView {
+        width:100%
+        height: 400
+    }
+}
