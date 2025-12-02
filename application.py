@@ -1,6 +1,4 @@
-from flask_login import login_user, login_required, current_user, logout_user
-from flask import Flask, render_template, redirect, request, url_for, flash
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask, render_template
 from flask_wtf.csrf import CSRFProtect
 import json
 
@@ -27,5 +25,6 @@ def contact_us_page():
 
 if __name__ == '__main__':
     application.run(debug=False, host='0.0.0.0')
+
 
 
